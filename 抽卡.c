@@ -19,7 +19,6 @@ void game()
 	getchar();
 	rad = rand() % 50+1;
 	a = card - rad;
-	printf("%d\n", a);
 	if (a == 0)
 	{printf("#******<传说>******#\n");}
 	else if (a>=-5&&a<=5)
