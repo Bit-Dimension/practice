@@ -14,7 +14,7 @@ void bs(int sz,int arr[])
 				int tmp = arr[j];
 				arr[j] = arr[j + 1];
 				arr[j + 1] = tmp;
-				flag=0;//事实上不完全有序
+				flag=0;//本趟排序前不完全有序
 			}
 			
 		}
