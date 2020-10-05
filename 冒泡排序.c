@@ -3,9 +3,9 @@
 void bs(int sz,int arr[])
 {
 	int j; int i;
-	for (i = 0; i < sz - 1; i++)
+	for (i = 0; i < sz - 1; i++)  //共进行sz-1趟冒泡排序
 	{
-		for (j = 0; j < sz - 1-i; j++)  //第i位至多只需进行sz-1-i次比较
+		for (j = 0; j < sz - 1-i; j++)  //一趟排序//第i位至多只需进行sz-1-i次比较
 		{
 			if (arr[j] > arr[j + 1])
 			{
