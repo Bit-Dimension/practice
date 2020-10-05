@@ -5,15 +5,21 @@ void bs(int sz,int arr[])
 	int j; int i;
 	for (i = 0; i < sz - 1; i++)  //共进行sz-1趟冒泡排序
 	{
+		int flag=1;//假设数组有序
 		for (j = 0; j < sz - 1-i; j++)  //一趟排序//第i位至多只需进行sz-1-i次比较
 		{
+			
 			if (arr[j] > arr[j + 1])
 			{
 				int tmp = arr[j];
 				arr[j] = arr[j + 1];
 				arr[j + 1] = tmp;
+				flag=0;//事实上不完全有序
 			}
+			
 		}
+		if(flag==1)
+			break;
 	}
 }
 int main()
