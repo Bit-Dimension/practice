@@ -4,7 +4,7 @@ char board[ROW][COL] = { 0 };
 int a; int b;
 int *ap = &a; int *bp = &b;
 
-void initibd(char board[ROW][COL])
+void initibd(char board[ROW][COL])  //æ•°ç»„çš„åˆå§‹åŒ–
 {
 	int i; int j;
 	for (i = 0; i < ROW; i++)
@@ -15,7 +15,7 @@ void initibd(char board[ROW][COL])
 		}
 	}
 }
-void display()
+void display()  //æ£‹ç›˜æ‰“å°
 {
 	int i; int j; int z;
 	for (i = 0; i < ROW; i++)
@@ -42,7 +42,7 @@ void display()
 void playermove(char board[ROW][COL])
 {
 	int x; int y;
-	printf("ÎÒµÄ»ØºÏ£¡\n£¨ÊäÈë×ø±ê<ĞĞ ÁĞ>£©\n");
+	printf("æˆ‘çš„å›åˆï¼\nï¼ˆè¾“å…¥åæ ‡<è¡Œ åˆ—>ï¼‰\n");
 again:
 	scanf("%d%d", &x, &y);
 	getchar();
@@ -57,12 +57,12 @@ again:
 			}
 			else
 			{
-				printf("ÎªÊ²Ã´ÒªÍùÓĞÆåµÄµØ·½ÏÂÄØ£¿Ææ¹ÖµÄÈË\n\nÕâ´ÎÕı³£µãÊäÈë°É£º");
+				printf("ä¸ºä»€ä¹ˆè¦å¾€æœ‰æ£‹çš„åœ°æ–¹ä¸‹å‘¢ï¼Ÿå¥‡æ€ªçš„äºº\n\nè¿™æ¬¡æ­£å¸¸ç‚¹è¾“å…¥å§ï¼š");
 				goto again;
 			}
 	}
 }
-void AI(char z, char board[ROW][COL], int* x, int* y)
+void AI(char z, char board[ROW][COL], int* x, int* y)  //è®©ç”µè„‘ä¸é‚£ä¹ˆè ¢     //ï¼ï¼ï¼è®©å‡½æ•°æ”¹å˜æ•°å€¼ç”¨æŒ‡é’ˆï¼ï¼ï¼
 {
 	int i; 
 	if (board[0][0] == z&&board[1][1] == z&&board[2][2]==' ')
@@ -137,8 +137,8 @@ void aimove(int o)
 	x = rand() % ROW; y = rand() % COL;
 	if (o == 0)
 	{
-		AI(64, board, &x, &y);
-		AI(35, board, &x, &y);
+		AI(64, board, &x, &y);  //@
+		AI(35, board, &x, &y);  //#
 	}
 		if (board[x][y] == ' ')
 		{
@@ -156,7 +156,7 @@ void win(int n)
 	{
 	case 1:
 		printf("####################\n");
-		printf("##<!***ÄãÓ®ÁË***!>##\n");
+		printf("##<!***ä½ èµ¢äº†***!>##\n");
 		printf("####################\n");
 		break;
 	case 2:
@@ -168,7 +168,7 @@ void win(int n)
 		break;
 	case 4:
 		printf("####################\n");
-		printf("#<*Æì¹ÄÏàµ±µÄ¶ÔÊÖ*>#\n");
+		printf("#<*æ——é¼“ç›¸å½“çš„å¯¹æ‰‹*>#\n");
 		printf("####################\n");
 		break;
 	default:
@@ -216,12 +216,12 @@ void game(int o)
 	srand((unsigned int)time(NULL));
 	initibd(board);
 	system("cls");
-	printf("\n\n¿ªÊ¼ÓÎÏ·\n");
+	printf("\n\nå¼€å§‹æ¸¸æˆ\n");
 	Sleep(600);
 	system("cls");
 	if (o == 0)
 	{
-		printf("\n\n\n*ÖÇĞµÏµÍ³ÒÑ×°ÔØ*");
+		printf("\n\n\n*æ™ºæ¢°ç³»ç»Ÿå·²è£…è½½*");
 		Sleep(600);
 		system("cls");
 	}
@@ -234,7 +234,7 @@ void game(int o)
 			if (o == 0 && judge(board) == 1)
 			{
 				printf("#######################\n");
-				printf("##<!*&*ÇøÇøÖÇĞµ!*&*!>##\n");
+				printf("##<!*&*åŒºåŒºæ™ºæ¢°!*&*!>##\n");
 				printf("#######################\n");
 				break;
 			}
@@ -247,15 +247,15 @@ void game(int o)
 			if (Full(board) != 3)
 				break;
 		}
-		printf("AIĞĞ¶¯ÖĞ.");
+		printf("AIè¡ŒåŠ¨ä¸­.");
 		Sleep(300);
 		system("cls");
 		display();
-		printf("AIĞĞ¶¯ÖĞ..");
+		printf("AIè¡ŒåŠ¨ä¸­..");
 		Sleep(300);
 		system("cls");
 		display();
-		printf("AIĞĞ¶¯ÖĞ...");
+		printf("AIè¡ŒåŠ¨ä¸­...");
 		Sleep(250);
 		system("cls");
 		display();
