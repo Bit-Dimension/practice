@@ -3,16 +3,16 @@
 
 void menu()
 {
-	printf("*******  ¾®×ÖÆåPRO  *******\n");
+	printf("*******  井字棋PRO  *******\n");
 	printf("***************************\n");
 	printf("***  1.play     0.exit  ***\n");
 	printf("***************************\n");
 }
 void OP()
 {
-	printf("*******<  AIÑ¡Ôñ  >*******\n");
+	printf("*******<  AI选择  >*******\n");
 	printf("**************************\n");
-	printf("***  1.ÆÕÍ¨    0.ÖÇÐµ  ***\n");
+	printf("***  1.普通    0.智械  ***\n");
 	printf("**************************\n");
 }
 int main()
@@ -37,7 +37,7 @@ int main()
 			case 0:
 				break;
 			default:
-				printf("ÊäÈë0»ò1\n\n");
+				printf("输入0或1\n\n");
 				break;
 			}
 		} while (input!=0);
