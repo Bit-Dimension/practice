@@ -32,9 +32,9 @@ void display()  //棋盘打印
 			for (z = 0; z < COL; z++)
 			{
 				if (z < COL - 1)
-					printf("---|", board[i][j]);
+					printf("---|");
 				else
-					printf("---\n", board[i][j]);
+					printf("---\n");
 			}
 		}
 	}
