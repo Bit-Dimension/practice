@@ -24,7 +24,7 @@ void bs(int sz,int arr[])
 }
 int main()
 {
-	int i;
+	int i=0;
 	int arr[] = {64684,848,99999,233,846,13302};
 	int sz = sizeof(arr) / sizeof(arr[0]);
 	bs(sz,arr);
